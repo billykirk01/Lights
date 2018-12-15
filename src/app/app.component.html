@@ -1,0 +1,17 @@
+<app-toolbar [user]="user" (LogIn)="logIn()"></app-toolbar>
+
+<div *ngIf="user?.currentLocation" [ngClass]="{'uk-grid': !onMobile, 'uk-grid-small': !onMobile }">
+    <div [ngClass]="{'uk-width-1-2': !onMobile}">
+        <div [ngClass]="{'uk-margin-left': !onMobile, 'uk-card-hover': !onMobile}">
+            <app-power *ngIf="user" [user]="user" [onMobile]="onMobile"></app-power>
+        </div>
+    </div>
+    <div [ngClass]="{'uk-width-1-2': !onMobile}">
+        <div [ngClass]="{'uk-margin-right': !onMobile, 'uk-card-hover': !onMobile}">
+            <app-adjust *ngIf="user" [user]="user"></app-adjust>
+        </div>
+        <div [ngClass]="{'uk-margin-right': !onMobile, 'uk-card-hover': !onMobile}">
+            <app-scenes *ngIf="user" [user]="user"></app-scenes>
+        </div>
+    </div>
+</div>

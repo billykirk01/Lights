@@ -1,0 +1,3 @@
+<h4 class="header" mat-header>Lifx token</h4>
+<input #tokenField class="field" placeholder="Lifx token" [value]="this.data.user.lifxToken || ''">
+<button class="button" (click)="saveToken(tokenField.value)" mat-button>Save</button>

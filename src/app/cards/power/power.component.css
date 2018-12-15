@@ -1,0 +1,22 @@
+.spinner{
+    margin: 0 auto;
+}
+
+.rounded-card {
+    border-radius: 5px;
+}
+
+.light-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.light-grid-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.light-cell {
+    display: grid;
+    grid-template-rows: 20% 80%;
+}

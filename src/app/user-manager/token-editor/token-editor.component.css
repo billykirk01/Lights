@@ -1,0 +1,17 @@
+.header {
+    margin-top: 10px;
+}
+
+.field{
+    width: 100%;
+    font-size: 1em;
+    display: block;
+    border: none;
+    outline:none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    float: right;
+}

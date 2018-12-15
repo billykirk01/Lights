@@ -1,0 +1,10 @@
+.rounded-card {
+    border-radius: 5px;
+}
+
+.rounded-button {
+    border-radius: 100px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}

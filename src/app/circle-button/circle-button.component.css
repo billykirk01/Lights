@@ -1,0 +1,19 @@
+.circle {
+    margin: 15px;
+    max-width: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.circle-mobile {
+    margin: 10px;
+    max-width: 100px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

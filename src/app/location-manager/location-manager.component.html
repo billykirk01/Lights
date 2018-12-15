@@ -1,0 +1,8 @@
+<mat-nav-list>
+  <mat-list-item (click)="changeLocation(location)" *ngFor="let location of this.data.locations">
+    <mat-icon mat-list-icon *ngIf="location.id==this.data.user?.currentLocation">bookmark</mat-icon>
+    <mat-icon mat-list-icon *ngIf="location.id!=this.data.user?.currentLocation">bookmark_border</mat-icon>
+    <h4 mat-line>{{location.name}}</h4>
+    <p mat-line>{{location.groupsDescription}}</p>
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,36 @@
+<div *ngIf="groups" class="uk-card uk-card-default uk-card-body rounded-card uk-margin-small-top">
+  <div uk-grid class="uk-margin-bottom">
+    <div class="uk-width-1-2">
+      <h3 class="uk-card-title">Adjust</h3>
+    </div>
+  </div>
+
+  <div class="uk-margin-small-bottom">
+    <ng-container *ngFor="let group of groups">
+      <button mat-button disableRipple="true" [color]="group.selected ? 'accent' : ''" class="rounded-button" (click)="selectionButtonPressed(group)">{{
+        group.name }}</button>
+    </ng-container>
+  </div>
+
+  <p class="uk-margin-small-bottom uk-margin-small-top">Kelvin</p>
+
+  <button mat-button [disabled]="!enableButtons" disableRipple="true" [color]="kelvin == activeKelvin ? 'accent' : ''"
+    *ngFor="let kelvin of kelvinLevels" style="min-width: 75px;" [ngClass]="{'accent white-text': kelvin == activeKelvin}"
+    class="rounded-button" (click)="setKelvin(kelvin)">{{kelvin}}K
+  </button>
+
+  <p class="uk-margin-small-bottom">Brightness</p>
+
+  <button mat-button [disabled]="!enableButtons" disableRipple="true" [color]="brightness == activeBrightness ? 'accent' : ''"
+    *ngFor="let brightness of brightnessLevels" style="min-width: 70px;" [ngClass]="{'accent white-text': brightness == activeBrightness}"
+    class="rounded-button" (click)="setBrightness(brightness)">{{brightness}}%
+  </button>
+
+  <p class="uk-margin-small-bottom">Color</p>
+
+
+  <button mat-button [disabled]="!enableButtons" disableRipple="true" [color]="color.name == activeColor ? 'accent' : ''"
+    *ngFor="let color of colors" class="rounded-button" (click)="setColor(color)">{{color.name}}
+  </button>
+
+</div>

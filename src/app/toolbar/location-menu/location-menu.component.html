@@ -1,0 +1,8 @@
+<button mat-flat-button *ngIf="!user" class="dropdown-button" [disableRipple]="'true'">
+  <mat-icon>home</mat-icon>
+</button>
+<button mat-flat-button (click)="openLocationManager()" *ngIf="user" class="dropdown-button" [disableRipple]="'true'">
+  <mat-icon>home</mat-icon>
+  <span class="uk-margin-small-left">{{ user.lifxToken ? user.currentLocationName || 'Choose location' : 'Add lifx
+    token' }}</span>
+</button>

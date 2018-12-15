@@ -1,0 +1,15 @@
+<div class="uk-card uk-card-default uk-card-body rounded-card uk-margin-small-top">
+  <div uk-grid class="uk-margin-bottom">
+    <div class="uk-width-1-2">
+      <h3 class="uk-card-title">Scenes</h3>
+    </div>
+  </div>
+
+  <div>
+    <ng-container *ngFor="let scene of scenes | async">
+      <button mat-button disableRipple="true" [color]="scene.name == activeScene ? 'accent' : ''" class="rounded-button"
+        (click)="activateScene(scene)">{{
+        scene.name }}</button>
+    </ng-container>
+  </div>
+</div>
