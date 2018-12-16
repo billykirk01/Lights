@@ -22,9 +22,7 @@ export class PowerComponent {
 
   ngOnChanges(changes: SimpleChanges) {
     //check if user exists
-    if (!changes.user.currentValue) {
-      return
-    }
+    if (!changes.user) { return }
 
     if (!changes.user.previousValue || changes.user.currentValue.currentLocation != changes.user.previousValue.currentLocation) {
       this.lifx.getGroups(this.user).subscribe((groups) => {
